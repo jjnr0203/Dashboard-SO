@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Sistemas Operativos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h1>📊 Dashboard Sistemas Operativos</h1>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="chartType">Tipo de Gráfico:</label>
+                <select id="chartType">
+                    <option value="line">Líneas</option>
+                    <option value="bar">Barras</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label>Sistemas a Graficar (1-3):</label>
+                <div class="checkbox-group">
+                    <div>
+                        <input type="checkbox" id="checkWindows" value="Windows" checked>
+                        <label for="checkWindows">Windows</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="checkLinux" value="Linux">
+                        <label for="checkLinux">Linux</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="checkMacOS" value="macOS">
+                        <label for="checkMacOS">macOS</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <canvas id="osChart"></canvas>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
