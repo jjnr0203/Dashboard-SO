@@ -1,45 +1,44 @@
-// script.js - Código / Buenas prácticas
-
 // DATOS DE EJEMPLO (hasta 2024, incluyendo los años del ejemplo)
 const osData = {
     '2001': { Windows: 90, Linux: 5, macOS: 5 },
     '2005': { Windows: 85, Linux: 10, macOS: 5 },
     '2010': { Windows: 80, Linux: 12, macOS: 8 },
     '2020': { Windows: 75, Linux: 15, macOS: 10 },
-    '2024': { Windows: 70, Linux: 18, macOS: 12 } // Datos estimados para el requisito 2024
+    '2024': { Windows: 70, Linux: 18, macOS: 12 },
+    '2025': { Windows: 75, Linux: 15, macOS: 10 }
+    
 };
 
-// Configuración de colores para leyendas claras (Estética / Usabilidad)
+// Configuración de colores para leyendas
 const osConfig = {
     Windows: { color: 'rgba(0, 123, 255, 1)', label: 'Windows (%)' },
     Linux: { color: 'rgba(255, 193, 7, 1)', label: 'Linux (%)' },
     macOS: { color: 'rgba(108, 117, 125, 1)', label: 'macOS (%)' }
 };
 
-// Referencia al canvas y variable para la instancia del gráfico
+// Instancia del gráfico
 const ctx = document.getElementById('osChart')?.getContext('2d');
 let osChart;
 
-/**
- * Función principal para crear o actualizar el gráfico.
- * (Interacción y Funcionalidad, Datos/Visualización)
- */
+
+//FUNCION PRICIPAL CREAR Y ACTUALIZAR GRAFICO 
 function updateChart() {
     if (!ctx) return; // Salir si el canvas no se encuentra
 
-    // 1. Obtener los sistemas seleccionados (1 a 3 sistemas)
+    //Obtener los sistemas seleccionados
     const selectedSystems = [];
     const checkboxes = document.querySelectorAll('.checkbox-group input[type="checkbox"]');
     checkboxes.forEach(checkbox => {
         if (checkbox.checked) {// script.js - Código / Buenas prácticas
 
-// DATOS DE EJEMPLO (hasta 2024, incluyendo los años del ejemplo)
+// DATOS DE EJEMPLO
 const osData = {
     '2001': { Windows: 90, Linux: 5, macOS: 5 },
     '2005': { Windows: 85, Linux: 10, macOS: 5 },
     '2010': { Windows: 80, Linux: 12, macOS: 8 },
     '2020': { Windows: 75, Linux: 15, macOS: 10 },
-    '2024': { Windows: 70, Linux: 18, macOS: 12 } // Datos estimados para el requisito 2024
+    '2024': { Windows: 70, Linux: 18, macOS: 12 },
+    '2025': { Windows: 75, Linux: 15, macOS: 10 }
 };
 
 // Configuración de colores para leyendas claras (Estética / Usabilidad)
